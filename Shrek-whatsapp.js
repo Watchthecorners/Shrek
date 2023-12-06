@@ -1,9 +1,11 @@
+//Original Script by Matt Fontes https://github.com/Matt-Fontes/SendScriptWhatsApp
+//Script eddited to sent one line per second so Whatsapp doesn't failed eventually. 
 async function enviarScript(scriptText) {
     const lines = scriptText.split(/[\n\t]+/).map(line => line.trim()).filter(line => line);
     const main = document.querySelector("#main");
     const textarea = main.querySelector(`div[contenteditable="true"]`);
 
-    if (!textarea) throw new Error("Não há uma conversa aberta");
+    if (!textarea) throw new Error("No Chat open");
 
     for (const line of lines) {
         console.log(line);
