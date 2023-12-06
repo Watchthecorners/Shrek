@@ -1,5 +1,6 @@
-//Original Script by Matt Fontes https://github.com/Matt-Fontes/SendScriptWhatsApp
-//Script eddited to sent one line per second so Whatsapp doesn't failed eventually. 
+// Original script by Matt Fontes (https://github.com/Matt-Fontes/SendScriptWhatsApp)
+// Modified to send one line per second to prevent potential failures on WhatsApp.
+
 async function enviarScript(scriptText) {
     const lines = scriptText.split(/[\n\t]+/).map(line => line.trim()).filter(line => line);
     const main = document.querySelector("#main");
